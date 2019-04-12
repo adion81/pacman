@@ -21,19 +21,93 @@ div.row div{
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
+    width: 29px;
+    height: 29px;
+    position: absolute;
+}
+#blinky{
+    background-image: url(img/blinky.gif);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 30px;
-    left: 30px
+    transform: scaleX(-1);
+}
+#inky{
+    background-image: url(img/inky.gif);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+#orange{
+    background-image: url(img/clyde.gif);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    transform: scaleX(-1);
+}
+#pinky{
+    background-image: url(img/pinky.gif);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
 }
 
+#modal{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 900px;
+    height: 330px;
+    z-index: 100;
+    background-color: rgba(255, 0, 0, 0.657);
+    color: whitesmoke;
+}
+#modal h2{
+    text-align: center;
+    margin: 10% 0 5% 0;
+}
+#modal button{
+    display: block;
+    padding: 1%;
+    color: black;
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 0 auto;
+}
 
 .coin{
-    background-image: radial-gradient(yellow, yellow,black,black,black, black, black);
+    background-image: radial-gradient(yellow, yellow, black, black,black,black,black,black, black, black);
     background-position: center;
     border-radius: 50%;
     background-repeat: no-repeat;
+}
+.superCoin{
+    background-image: radial-gradient(yellow, yellow, black, black);
+    background-position: center;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    animation: blinking .8s infinite;
+}
+@keyframes blinking{
+    0%{     background-image: radial-gradient(black, black, black, black); }
+    25%{    background-image: radial-gradient(yellow, yellow, black, black); }
+    50%{    background-image: radial-gradient(black, black, black, black); }
+    75%{    background-image: radial-gradient(yellow, yellow, black, black);  }
+    100%{   background-image: radial-gradient(black, black, black, black);    }
 }
 #score{
     border: 1px solid white;
